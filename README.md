@@ -1,6 +1,6 @@
 pdf2txt
 ======================
-[![License](https://poser.pugx.org/badges/poser/license.svg)](./LICENSE)
+[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](./LICENSE)
 
 This script converts .pdf files to .txt files.
 
@@ -86,7 +86,7 @@ You can [download](https://github.com/glenjasper/pdf2txt/archive/master.zip) the
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the GNU General Public License v3.0 License - see the [LICENSE](./LICENSE) file for details.
 
 ## Acknowledgments
 
