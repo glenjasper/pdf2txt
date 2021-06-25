@@ -87,10 +87,3 @@ You can [download](https://github.com/glenjasper/pdf2txt/archive/master.zip) the
 ## License
 
 This project is licensed under the GNU General Public License v3.0 License - see the [LICENSE](./LICENSE) file for details.
-
-## Acknowledgments
-
-* Dr. Aristóteles Góes-Neto
-* MSc. Rosimeire Floripes
-* MSc. Joyce da Cruz Ferraz
-* MSc. Danitza Xiomara Romero Calle
