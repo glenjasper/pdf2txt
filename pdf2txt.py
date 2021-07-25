@@ -116,7 +116,7 @@ class Pdf2Txt:
         if logs is not None:
             for log in logs:
                 if log is not None:
-                    with open(log, 'a') as f:
+                    with open(log, 'a', encoding = 'utf-8') as f:
                         f.write("%s\n" % msg_write)
                         f.close()
 
