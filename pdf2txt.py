@@ -11,6 +11,8 @@ import traceback
 import xlsxwriter
 import unicodedata
 import pandas as pd
+from colorama import init
+init()
 
 def menu(args):
     parser = argparse.ArgumentParser(description = "This script converts .pdf files to .txt files.", epilog = "Thank you!")
