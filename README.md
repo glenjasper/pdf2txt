@@ -31,6 +31,7 @@ This script converts .pdf files to .txt files.
   $ sudo pip3 install argparse
   $ sudo pip3 install xlsxwriter
   $ sudo pip3 install pandas
+  $ sudo pip3 install colorama
 ```
 
 ## Installation
