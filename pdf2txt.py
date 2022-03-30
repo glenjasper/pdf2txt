@@ -10,6 +10,7 @@ import subprocess
 import traceback
 import xlsxwriter
 import unicodedata
+import numpy as np
 import pandas as pd
 from colorama import init
 init()
@@ -236,7 +237,8 @@ class Pdf2Txt:
         dict_pdf = {}
         if self.check_path(self.XLS_FILE):
             df = pd.read_excel(io = self.XLS_FILE, sheet_name = self.XLS_SHEET_DETAIL)
-            df = df.where(pd.notnull(df), None)
+            # df = df.where(pd.notnull(df), None)
+            df = df.replace({np.nan: None})
 
             for idx, row in df.iterrows():
                 if row[self.xls_col_download] == self.STATUS_OK:
