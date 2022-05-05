@@ -84,7 +84,7 @@ You can [download](https://github.com/glenjasper/pdf2txt/archive/master.zip) the
 * [Glen Jasper](https://github.com/glenjasper)
 
 ## Organization
-* [Molecular and Computational Biology of Fungi Laboratory](http://lbmcf.pythonanywhere.com) (LBMCF, ICB - **UFMG**, Belo Horizonte, Brazil).
+* [Molecular and Computational Biology of Fungi Laboratory](https://sites.icb.ufmg.br/lbmcf/index.html) (LBMCF, ICB - **UFMG**, Belo Horizonte, Brazil).
 
 ## License
 
