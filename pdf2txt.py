@@ -15,7 +15,7 @@ import pandas as pd
 from colorama import init
 init()
 
-def menu(args):
+def menu():
     parser = argparse.ArgumentParser(description = "This script converts .pdf files to .txt files.", epilog = "Thank you!")
     parser.add_argument("-f", "--folder_pdf", required = True, help = "Folder that contains all .pdf files")
     parser.add_argument("-o", "--output", help = "Output folder")
@@ -29,8 +29,8 @@ def menu(args):
 
     op2t.FOLDER_PDF = os.path.join(folder_pdf_path, folder_pdf_name)
     if not op2t.check_path(op2t.FOLDER_PDF):
-        op2t.show_print("%s: error: the folder '%s' doesn't exist" % (os.path.basename(__file__), op2t.FOLDER_PDF), showdate = False, font = oscihub.YELLOW)
-        op2t.show_print("%s: error: the following arguments are required: -f/--folder_pdf" % os.path.basename(__file__), showdate = False, font = oscihub.YELLOW)
+        op2t.show_print("%s: error: the folder '%s' doesn't exist" % (os.path.basename(__file__), op2t.FOLDER_PDF), showdate = False, font = op2t.YELLOW)
+        op2t.show_print("%s: error: the following arguments are required: -f/--folder_pdf" % os.path.basename(__file__), showdate = False, font = op2t.YELLOW)
         exit()
 
     if args.output is not None:
@@ -42,7 +42,7 @@ def menu(args):
         op2t.OUTPUT_PATH = os.path.join(output_path, output_name)
         created = op2t.create_directory(op2t.OUTPUT_PATH)
         if not created:
-            op2t.show_print("%s: error: Couldn't create folder '%s'" % (os.path.basename(__file__), op2t.OUTPUT_PATH), showdate = False, font = oscihub.YELLOW)
+            op2t.show_print("%s: error: Couldn't create folder '%s'" % (os.path.basename(__file__), op2t.OUTPUT_PATH), showdate = False, font = op2t.YELLOW)
             exit()
     else:
         op2t.OUTPUT_PATH = os.getcwd().strip()
@@ -454,10 +454,10 @@ class Pdf2Txt:
             worksheet.write(irow, icol + 9, col_txt_name, cell_format_row)
         workbook.close()
 
-def main(args):
+def main():
     try:
         start = op2t.start_time()
-        menu(args)
+        menu()
 
         op2t.LOG_FILE = os.path.join(op2t.OUTPUT_PATH, op2t.LOG_NAME)
         op2t.DAMAGED_FILES = os.path.join(op2t.OUTPUT_PATH, op2t.DAMAGED_FILES)
@@ -480,4 +480,4 @@ def main(args):
 
 if __name__ == '__main__':
     op2t = Pdf2Txt()
-    main(sys.argv)
+    main()
