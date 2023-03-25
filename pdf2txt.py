@@ -65,7 +65,7 @@ class Pdf2Txt:
         # Xls Summary
         self.XLS_FILE = 'summary_download.xlsx'
         self.XLS_FILE_CONVERTED = 'summary_converted.xlsx'
-        self.XLS_SHEET_DETAIL = 'Detail'
+        self.XLS_SHEET_UNIQUE = 'Unique'
 
         # Xls Columns
         self.xls_col_item = 'Item'
@@ -236,7 +236,7 @@ class Pdf2Txt:
     def read_xls(self):
         dict_pdf = {}
         if self.check_path(self.XLS_FILE):
-            df = pd.read_excel(io = self.XLS_FILE, sheet_name = self.XLS_SHEET_DETAIL)
+            df = pd.read_excel(io = self.XLS_FILE, sheet_name = self.XLS_SHEET_UNIQUE)
             # df = df.where(pd.notnull(df), None)
             df = df.replace({np.nan: None})
 
@@ -403,7 +403,7 @@ class Pdf2Txt:
         _last_col = len(self.xls_columns_csv) - 1
 
         workbook = xlsxwriter.Workbook(self.XLS_FILE_CONVERTED)
-        worksheet = workbook.add_worksheet(self.XLS_SHEET_DETAIL)
+        worksheet = workbook.add_worksheet(self.XLS_SHEET_UNIQUE)
         worksheet.freeze_panes(row = 1, col = 0) # Freeze the first row.
         worksheet.autofilter(first_row = 0, first_col = 0, last_row = 0, last_col = _last_col) # 'A1:H1'
         worksheet.set_default_row(height = 14.5)
