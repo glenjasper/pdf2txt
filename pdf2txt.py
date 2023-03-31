@@ -70,6 +70,7 @@ class Pdf2Txt:
         # Xls Columns
         self.xls_col_item = 'Item'
         self.xls_col_title = 'Title'
+        self.xls_col_abstract = 'Abstract'
         self.xls_col_year = 'Year'
         self.xls_col_doi = 'DOI'
         self.xls_col_document_type = 'Document Type'
@@ -83,6 +84,7 @@ class Pdf2Txt:
 
         self.xls_columns_csv = [self.xls_col_item,
                                 self.xls_col_title,
+                                self.xls_col_abstract,
                                 self.xls_col_year,
                                 self.xls_col_doi,
                                 self.xls_col_document_type,
@@ -244,6 +246,7 @@ class Pdf2Txt:
                 if row[self.xls_col_download] == self.STATUS_OK:
                     collect = {}
                     collect[self.xls_col_title] = row[self.xls_col_title]
+                    collect[self.xls_col_abstract] = row[self.xls_col_abstract]
                     collect[self.xls_col_year] = row[self.xls_col_year]
                     collect[self.xls_col_doi] = row[self.xls_col_doi]
                     collect[self.xls_col_document_type] = row[self.xls_col_document_type]
@@ -419,20 +422,22 @@ class Pdf2Txt:
 
         # Add rows
         worksheet.set_column(first_col = 0, last_col = 0, width = 7)  # Column A:A
-        worksheet.set_column(first_col = 1, last_col = 1, width = 40) # Column B:B
-        worksheet.set_column(first_col = 2, last_col = 2, width = 8)  # Column C:C
-        worksheet.set_column(first_col = 3, last_col = 3, width = 33) # Column D:D
-        worksheet.set_column(first_col = 4, last_col = 4, width = 18) # Column E:E
-        worksheet.set_column(first_col = 5, last_col = 5, width = 12) # Column F:F
-        worksheet.set_column(first_col = 6, last_col = 6, width = 11) # Column G:G
-        worksheet.set_column(first_col = 7, last_col = 7, width = 13) # Column H:H
+        worksheet.set_column(first_col = 1, last_col = 1, width = 30) # Column B:B
+        worksheet.set_column(first_col = 2, last_col = 2, width = 33) # Column C:C
+        worksheet.set_column(first_col = 3, last_col = 3, width = 8)  # Column D:D
+        worksheet.set_column(first_col = 4, last_col = 4, width = 30) # Column E:E
+        worksheet.set_column(first_col = 5, last_col = 5, width = 18) # Column F:F
+        worksheet.set_column(first_col = 6, last_col = 6, width = 12) # Column G:G
+        worksheet.set_column(first_col = 7, last_col = 7, width = 11) # Column H:H
         worksheet.set_column(first_col = 8, last_col = 8, width = 13) # Column I:I
-        worksheet.set_column(first_col = 9, last_col = 9, width = 30) # Column J:J
+        worksheet.set_column(first_col = 9, last_col = 9, width = 11) # Column J:J
+        worksheet.set_column(first_col = 10, last_col = 10, width = 30) # Column K:K
 
         cell_format_row = workbook.add_format({'text_wrap': True, 'valign': 'top'})
         icol = 0
         for irow, (_, item) in enumerate(data_txt.items(), start = 1):
             col_title = item[self.xls_col_title]
+            col_abstract = item[self.xls_col_abstract]
             col_year = item[self.xls_col_year]
             col_doi = item[self.xls_col_doi]
             col_document_type = item[self.xls_col_document_type]
@@ -444,14 +449,15 @@ class Pdf2Txt:
 
             worksheet.write(irow, icol + 0, irow, cell_format_row)
             worksheet.write(irow, icol + 1, col_title, cell_format_row)
-            worksheet.write(irow, icol + 2, col_year, cell_format_row)
-            worksheet.write(irow, icol + 3, col_doi, cell_format_row)
-            worksheet.write(irow, icol + 4, col_document_type, cell_format_row)
-            worksheet.write(irow, icol + 5, col_languaje, cell_format_row)
-            worksheet.write(irow, icol + 6, col_cited_by, cell_format_row)
-            worksheet.write(irow, icol + 7, col_repository, cell_format_row)
-            worksheet.write(irow, icol + 8, col_converted, cell_format_row)
-            worksheet.write(irow, icol + 9, col_txt_name, cell_format_row)
+            worksheet.write(irow, icol + 2, col_abstract, cell_format_row)
+            worksheet.write(irow, icol + 3, col_year, cell_format_row)
+            worksheet.write(irow, icol + 4, col_doi, cell_format_row)
+            worksheet.write(irow, icol + 5, col_document_type, cell_format_row)
+            worksheet.write(irow, icol + 6, col_languaje, cell_format_row)
+            worksheet.write(irow, icol + 7, col_cited_by, cell_format_row)
+            worksheet.write(irow, icol + 8, col_repository, cell_format_row)
+            worksheet.write(irow, icol + 9, col_converted, cell_format_row)
+            worksheet.write(irow, icol + 10, col_txt_name, cell_format_row)
         workbook.close()
 
 def main():
