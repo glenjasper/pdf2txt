@@ -89,3 +89,9 @@ You can [download](https://github.com/glenjasper/pdf2txt/archive/master.zip) the
 ## License
 
 This project is licensed under the GNU General Public License v3.0 License - see the [LICENSE](./LICENSE) file for details.
+
+## Mandatory Attribution
+
+**Any use, distribution, or modification of this software must include the following attribution:**
+
+> This software was developed by Glen Jasper (https://github.com/glenjasper), originally available at https://github.com/glenjasper/pipeline-for-amplicon-analysis
