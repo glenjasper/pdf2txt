@@ -16,7 +16,7 @@ This script converts .pdf files to .txt files.
 - [Author](#author)
 - [Organization](#organization)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
+- [Required Attribution](#required-attribution)
 
 ## Pre-requisites
 
@@ -90,8 +90,12 @@ You can [download](https://github.com/glenjasper/pdf2txt/archive/master.zip) the
 
 This project is licensed under the GNU General Public License v3.0 License - see the [LICENSE](./LICENSE) file for details.
 
-## Mandatory Attribution
+## Required Attribution
 
-**Any use, distribution, or modification of this software must include the following attribution:**
+**Any use, distribution, or modification of this software must include one of the following attributions:**
 
 > This software was developed by Glen Jasper (https://github.com/glenjasper), originally available at https://github.com/glenjasper/pipeline-for-amplicon-analysis
+
+**or** (example citation):
+
+> Jasper G. (2024). *format_input.py* script. Available at: https://github.com/glenjasper/pipeline-for-amplicon-analysis (Accessed 21 July 2024)
