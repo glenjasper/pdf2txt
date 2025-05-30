@@ -94,8 +94,8 @@ This project is licensed under the GNU General Public License v3.0 License - see
 
 **Any use, distribution, or modification of this software must include one of the following attributions:**
 
-> This software was developed by Glen Jasper (https://github.com/glenjasper), originally available at https://github.com/glenjasper/pipeline-for-amplicon-analysis
+> This software was developed by Glen Jasper (https://github.com/glenjasper), originally available at https://github.com/glenjasper/pdf2txt
 
 **or** (example citation):
 
-> Jasper G. (2024). *format_input.py* script. Available at: https://github.com/glenjasper/pipeline-for-amplicon-analysis (Accessed 21 July 2024)
+> Jasper G. (2024). *format_input.py* script. Available at: https://github.com/glenjasper/pdf2txt (Accessed 21 July 2024)
